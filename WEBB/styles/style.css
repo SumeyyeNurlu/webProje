@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#2D4754;
+    --main-color:#ae8dcb;
     /* bu benim ana sayfamın arkapaln rengi olacak */
 
-    --black-color:#162429;
+    --black-color:#45345c;
     --border-color: 0.2rem solid rgbn(255,255,255,0.4)
 }
 
 *{
     font-family: "Poppins", sans-serif;
-   margin: 0; 
+    margin: 0; 
    /* kenara sıfırladım */
-   padding: 0;
+    padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -37,11 +37,28 @@ scroll-behavior:smooth ;
 }
 body{
     background-color:var(--main-color) ;
-    height: 200vh;
+   
 }
 
+section{
+    padding: 3.5rem 7%;
 
-/* !header start */
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 1.75rem;
+    color: #fff;
+    background-color: var(--black-color);
+    
+    cursor: pointer;
+    /* a etiketi olduğu için aslında gerek yok */
+}
+
+/* !header start ***********************************************************************************************************************/
 
 
 .header .logo img{
@@ -59,7 +76,7 @@ body{
     padding: 1rem,3rem;
     position:2rem 7% ;
     border-radius: 30rem;
-    box-shadow:0px 0px 17px -2px rgba(38, 145, 115, 0.75) ;
+    box-shadow:0px 0px 17px -2px rgba(90, 38, 145, 0.75) ;
 
 
 position: sticky;
@@ -87,9 +104,77 @@ z-index: 1000;
 
 
 /* çalışmıoooooooooooo */
-.header.buttons {
+.header.buttons  button{
     cursor: pointer;
     font-size: 2.5rem;
-    margin-left: auto;
-    background-color: pink;
+    margin-left: 2rem;
+    background-color: transparent;
 }
+
+
+/* header end **************************************************************************************************************** */
+/* home start **************************************************************************************************************** */
+.home{
+    min-height: 100vh;
+    background: url(../images/16.png)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+    
+}
+.home.content{
+max-width: 6rem;  
+/* font-size: 2rem; */
+
+}
+
+
+/* yazılarda görünmüyooooo */
+.home.content h1{
+    font-size: 6rem;
+    color: white;
+}
+
+.home.content p{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height:  1.8;
+    padding: 1rem 0;
+    color: white;
+}
+
+/* home end **************************************************************************************************************** */
+
+
+
+/* start menu *****************************/
+.menu .box-container{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+gap: 1.5rem;
+}
+
+.menu.box-container.box{
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.menu.box-container.box img{
+    width: 100%;
+   
+    object-fit: cover;
+}
+
+
+
+/* end menu *******************************/
