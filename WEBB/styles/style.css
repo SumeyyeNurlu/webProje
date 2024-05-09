@@ -1,26 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#ae8dcb;
+    --main-color:#b3aabb;
     /* bu benim ana sayfamın arkapaln rengi olacak */
 
-    --black-color:#45345c;
+    --black-color:#89888ab1;
     --border-color: 0.2rem solid rgbn(255,255,255,0.4)
 }
 
 *{
     font-family: "Poppins", sans-serif;
     margin: 0; 
-   /* kenara sıfırladım */
     padding: 0;
     box-sizing: border-box;
     outline: none;
     border: none;
     text-decoration: none;
-
-    text-transform: capitalize;
-    /* ilk harf büyük olsun diye */
-
     transition: 0.2s ease;
     /* geçiş efekti */
 }
@@ -30,30 +25,29 @@
 html{
     font-size: 62.5%;
     /* rem to px için yapılıyormuş responsive için gerekliymiş */
-overflow-x: hidden; 
-scroll-padding-top: 9rem; 
-scroll-behavior:smooth ;
+    overflow-x: hidden; 
+    scroll-padding-top: 9rem; 
+    scroll-behavior:smooth ;
 
 }
 body{
-    background-color:var(--main-color) ;
-   
+    background-color:var(--main-color) ; 
 }
 
 section{
-    padding: 3.5rem 7%;
+    padding: 2.5rem 7%;
+    /* burası aşağıdaki 4 lü grupla aradaki boşluk için */
 
 }
 
 .btn{
     margin-top: 1rem;
     display: inline-block;
-    padding: 2rem 3.75rem;
-    border-radius: 30rem;
-    font-size: 1.75rem;
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    font-size: 1rem;
     color: #fff;
     background-color: var(--black-color);
-    
     cursor: pointer;
     /* a etiketi olduğu için aslında gerek yok */
 }
@@ -62,10 +56,10 @@ section{
 
 
 .header .logo img{
-    height: 6rem;
+    height: 7rem;
 }
 
-/* <!-- logonun içindeki image etiketinin botutunu ayarlafım --> */
+
 
 .header{
     /*       */
@@ -75,13 +69,10 @@ section{
     justify-content:center;
     padding: 1rem,3rem;
     position:2rem 7% ;
-    border-radius: 30rem;
-    box-shadow:0px 0px 17px -2px rgba(90, 38, 145, 0.75) ;
-
-
-position: sticky;
-top: 0;
-z-index: 1000;
+    /* sayfa kaydığında header da aşağıya gelsin diye */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 
 }
 
@@ -93,29 +84,31 @@ z-index: 1000;
     border-bottom: 0.1rem solid transparent;
 }
 
-/* , ile ikisini aynı anda tanımlayabiliyoruz */
-.header .navbar .active,
+
+.header .navbar .active,/* , ile ikisini aynı anda tanımlayabiliyoruz */
 .header .navbar a:hover{
-   
+   /* fare üzerine geldiğinde altında çizgi oluşur */
     border-color: var(--main-color);
     padding-bottom: 0.2rem;
-
 }
 
 
 /* çalışmıoooooooooooo */
-.header.buttons  button{
+/* .header.buttons  button{
     cursor: pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
     background-color: transparent;
-}
+} */
+
+/* header kısmı end **************************************************************************************************************** */
 
 
-/* header end **************************************************************************************************************** */
-/* home start **************************************************************************************************************** */
+
+
+/* home kısmı  start **************************************************************************************************************** */
 .home{
-    min-height: 100vh;
+    min-height: 110vh;
     background: url(../images/16.png)
     no-repeat;
     background-size: cover;
@@ -125,13 +118,12 @@ z-index: 1000;
     align-items: center;
     
 }
-.home.content{
-max-width: 6rem;  
-/* font-size: 2rem; */
 
-}
+ .home.content{
+ max-width: 6rem;  
+ font-size: 2rem;} 
 
-
+ 
 /* yazılarda görünmüyooooo */
 .home.content h1{
     font-size: 6rem;
@@ -143,7 +135,7 @@ max-width: 6rem;
     font-weight: 300;
     line-height:  1.8;
     padding: 1rem 0;
-    color: white;
+    color: #ffffff;
 }
 
 /* home end **************************************************************************************************************** */
