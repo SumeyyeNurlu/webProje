@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
 
 :root{
-    --main-color:#b3aabb;
+    --main-color:#ffffff;
     /* bu benim ana sayfamın arkapaln rengi olacak */
 
-    --black-color:#89888ab1;
+    --black-color:#484a70;
     --border-color: 0.2rem solid rgbn(255,255,255,0.4)
 }
 
@@ -46,24 +46,27 @@ section{
     padding: 1rem 3rem;
     border-radius: 10rem;
     font-size: 1rem;
-    color: #fff;
+    color: #ffffff;
     background-color: var(--black-color);
     cursor: pointer;
     /* a etiketi olduğu için aslında gerek yok */
 }
 
+
+
+
+
 /* !header start ***********************************************************************************************************************/
 
 
 .header .logo img{
-    height: 7rem;
+    height: 8rem;
 }
 
 
 
 .header{
-    /*       */
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(178, 188, 133, 0.682); 
     display: flex;
     align-items: center;
     justify-content:center;
@@ -79,7 +82,7 @@ section{
 
 .header .navbar a{
     margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--black-color);
     border-bottom: 0.1rem solid transparent;
 }
@@ -93,13 +96,7 @@ section{
 }
 
 
-/* çalışmıoooooooooooo */
-/* .header.buttons  button{
-    cursor: pointer;
-    font-size: 2.5rem;
-    margin-left: 2rem;
-    background-color: transparent;
-} */
+
 
 /* header kısmı end **************************************************************************************************************** */
 
@@ -109,9 +106,9 @@ section{
 /* home kısmı  start **************************************************************************************************************** */
 .home{
     min-height: 110vh;
-    background: url(../images/16.png)
+    background: url(../images/arkaplan.png)
     no-repeat;
-    background-size: cover;
+    background-size: cover; 
     background-position: center;
     margin-top: -14.5rem;
     display: flex;
@@ -119,25 +116,30 @@ section{
     
 }
 
- .home.content{
- max-width: 6rem;  
- font-size: 2rem;} 
-
- 
-/* yazılarda görünmüyooooo */
-.home.content h1{
-    font-size: 6rem;
-    color: white;
+.home h4 {
+    font-size: 9rem;
+    font-weight:normal; 
+    color:var(--black-color);
 }
 
-.home.content p{
+
+
+
+.home p{
     font-size: 2rem;
-    font-weight: 300;
-    line-height:  1.8;
-    padding: 1rem 0;
-    color: #ffffff;
+    font-weight: normal; 
+    text-align: center;
+    color: #6c1165;
 }
 
+
+.home .btn{
+    
+    text-align: center;
+    display: block; 
+    margin: 0 auto;
+    margin-top: 2rem;
+}
 /* home end **************************************************************************************************************** */
 
 
@@ -149,24 +151,51 @@ grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
 gap: 1.5rem;
 }
 
-.menu.box-container.box{
-    padding: 3rem;
-    background-color: #fff;
-    border-radius: 3rem;
-    background-color: #fff;
-    min-height: 60rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+
+.box-head {
+   
+    position: relative;
+} 
+.small-image {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 290px; /* resimin genişliği */
+    height: 290px; /* resimin yüksekliği */
+    
 }
 
+.small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu-category {
+    position: absolute;
+    top: 10px; 
+    left: 10px; /* fotoğrafın solundan 10 piksel sağa kaydır */
+}
+.aaaa {
+    color: #FF69B4; /* Mersin yazısının rengini değiştir */
+    font-weight: bold; /* yazı kalınlığını artır */
+    position: absolute; /* yazının fotoğrafın üstüne konumlandır */
+    top: 0; /* fotoğrafın üstüne yerleştir */
+    left: 0;
+}
+h3 {
+    position: absolute; /* "Şehrim" kısmının fotoğrafın üstüne konumlandır */
+    top: 20px; /* fotoğrafın üstünden 20 piksel aşağıya kaydır */
+    left: 20px; /* fotoğrafın solundan 20 piksel sağa kaydır */
+}
 .menu.box-container.box img{
     width: 100%;
    
     object-fit: cover;
 }
-
-
+.btn {
+    margin: 0 auto;
+    width: 300px; /* butonun genişliği */
+}
 
 /* end menu *******************************/
