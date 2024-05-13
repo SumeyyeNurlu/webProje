@@ -133,12 +133,7 @@ section{
 
 
 
-/* start menu *****************************/
-/* .menu .box-container{
-display: grid;
-grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
-gap: 1.5rem;
-} */
+/* menu başlıyo----------------------------- */
 
 .box-head {
     position: relative;
@@ -204,3 +199,32 @@ height: auto; }
   
 
 /* end menu *******************************/
+ /* RESPONSİVE KISMI BAŞLIYOR */
+
+  /* ANLAMADIM */
+/* @media(max-witdth:900px){
+    html{font-size: 30%;}
+.header { padding: 1.5rem 2rem;}
+.header.logo img { height: 6rem;}
+.menu{
+    width: 100%;
+}
+} */.home2{
+    background: #e1caca;
+    
+}
+
+.home2 h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight:normal; 
+    color: #932755;
+}
+
+
+.home2 p{
+    font-size: 2rem;
+    font-weight: normal; 
+    text-align: center;
+    color: #070a1a;
+}
