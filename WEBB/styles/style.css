@@ -4,13 +4,12 @@
     --main-color:#cbc0c0;
     /* bu benim ana sayfamın arkapaln rengi olacak */
     --black-color:#05060f;
-    --border-color: 0.2rem solid rgbn(255,255,255,0.4)
+    
 }
 
 *{
     font-family: "Poppins", sans-serif;
     margin: 0; 
-    
     box-sizing: border-box;
     outline: none;
     border: none;
@@ -30,6 +29,9 @@ html{
 
 }
 body{
+    margin: 0; 
+     padding: 0; 
+      font-family: Arial, sans-serif;
     background-color:var(--main-color) ; 
 }
 
@@ -58,17 +60,18 @@ section{
 /* !header start ***********************************************************************************************************************/
 
 
-.header .logo img{
-    height: 8rem;
-}
+.logo img {
+    width: 100px;
+  }
 
 .header{
     background-color: rgba(255, 255, 255, 0.682); 
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    padding: 1rem,3rem;
-    position:2rem 7% ;
+    padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
     /* sayfa kaydığında header da aşağıya gelsin diye */
     position: sticky;
     top: 0;
@@ -76,6 +79,7 @@ section{
 }
 
 .header .navbar a{
+    text-decoration: none;
     margin: 0 1rem;
     font-size: 1.4rem;
     color: var(--black-color);
@@ -87,7 +91,7 @@ section{
 .header .navbar a:hover{
    /* fare üzerine geldiğinde altında çizgi oluşur */
     border-color: var(--main-color);
-    padding-bottom: 0.2rem;
+    padding-bottom: 0.1rem;
 }
 
 /* header kısmı end **************************************************************************************************************** */
@@ -141,6 +145,7 @@ section{
 
 
 .menu-category {
+    
     position: absolute;
     font-size: 1.4rem;
     top: 100px; 
@@ -166,7 +171,7 @@ h3 {
 }
 .menu.box-container.box img{
     width: 100%;
-   
+
     object-fit: cover;
 }
 
@@ -217,7 +222,16 @@ height: auto; }
 
 
 
-
+.carousel {
+    max-width: 600px; /* Slider'ın maksimum genişliği */
+    margin: 0 auto; /* Slider'ı merkezlemek için */
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
 
 
 .home2{
@@ -242,45 +256,81 @@ height: auto; }
 
 
 
-
-
-/* footer */
 footer {
     background-color: #957777;
     color: #fff;
-    padding: 50px 0;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-links, .contact-info, .social-media {
-    flex: 1 1 300px;
-    margin-bottom: 10px;
-    margin-top: 0; 
-    margin-bottom: 0;
-}
-
-.footer-links ul, .social-media ul {
+    justify-content: space-between;
+  }
+  
+  .footer-links ul {
     list-style: none;
     padding: 0;
-}
-
-.footer-links ul li, .social-media ul li {
-    margin-bottom: 10px;
-}
-
-.footer-links ul li a, .social-media ul li a {
+  }
+  
+  .footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-media ul li {
+    display: inline;
+  }
+  
+  .social-media ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+
+
+
+
+
+
+
+
+#Loginbody {
+    position: relative;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.footer-links ul li a:hover, .social-media ul li a:hover {
-    text-decoration: underline;
+.login-block {
+    text-align: left;
+    position: relative;
+    width: 100%;
+    background-color: #80a6a7;
+    grid-template-columns: 1fr 2fr;
 }
+
+#ortaladiv {
+    text-align: center;
+}
+
+#govdekismi {
+    text-align: left;
+}
+
+#Girisonaylabuton {
+    margin-top: 3%;
+    background-color: rgb(176, 86, 86);
+    color: white;
+}
+
 

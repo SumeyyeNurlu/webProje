@@ -11,77 +11,87 @@
     
     <title>SÜMEYYE NURLU</title>
     <link rel="stylesheet" href="styles/style.css">
-  </head>
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+<script src="javascript/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- <script>
+$('#myCarousel').carousel({
+  interval: 5000
+});
+
+</script> -->
+</head>
 <body>
+  <header class="header">
+      <a href="index.html" class="logo">
+          <img src="images/sumeyye nurlu.png" alt="logo" />  
+      </a>
+      <nav class="navbar">
+          <a href="index.html" >Ana Sayfa</a>
+          <a href="hakkımda.html">Hakkımda</a>
+          <a href="ilgialanlarım.html">İlgi Alanlarım</a>         
+          <a href="mirasımız.html">Mirasımız</a>
+          <a href="sehrim.html" class="active">Şehrim</a>
+          <a href="iletisim.html">İletişim</a>
+          <button><i class="fas fa-search"></i></button>
+          <button><i class="fas fa-heart"></i></button>
+          <button><i class="fas fa-bars"></i></button>  
+      </nav>
+  </header>
 
-
-    <!-- ! header section start --------------------------------------------------- -->
-   
-      <header class="header">
-
-        <a href="index.html" class="logo">
-        <img src="images/sumeyye nurlu.png" alt="logo" />  
-        </a>
-       
-     <!-- div      class buttons   çalışmıyoo -->
-        
-        <nav class="navbar">
-
-            <a href="index.html" >Ana Sayfa</a>
-            <a href="hakkımda.html">Hakkımda</a>
-            <a href="ilgialanlarım.html">İlgi Alanlarım</a>         
-            <a href="mirasımız.html">Mirasımız</a>
-            <a href="sehrim.html"class="active">Şehrim</a>
-            <a href="iletisim.html">İletişim</a>
-            <button><i class="fas fa-search"></i></button>
-            <button><i class="fas fa-heart"></i></button>
-            <button><i class="fas fa-bars"></i></button>  
-            
-        </nav>
-    </header>
-    <!-- ! header section end  -------------------------------------------------->
- 
-
-<!-- ------------------------------------------------------------ -->
- <!-- ! home kısmı buradan başlıyor  ---------------------------------------------->
- 
-<section class="home2">
-  <div class="content">
-    <h4> SÜMEYYE NURLU </h4>
-    <p> şehrim Mersin, Türkiye'nin Akdeniz kıyısında bulunan önemli bir liman şehridir. Tarih boyunca çeşitli medeniyetlere ev sahipliği yapmış olan Mersin, zengin kültürel mirasıyla dikkat çeker. Akdeniz ikliminin etkisi altında olan şehir, genellikle ılıman bir hava yaşar ve bu da tarıma elverişli topraklara sahip olmasını sağlar. Mersin, turistik açıdan da önemli bir destinasyondur; sahil şeridi, tarihi kalıntıları ve lezzetli Akdeniz mutfağıyla ziyaretçilerini cezbetmektedir. Ayrıca, Mersin'in ekonomisi de liman ticareti, tarım ve turizme dayanmaktadır.
-    </p>
-    
-  </div>
+  <section class="home2">
+      <div class="content">
+          <h4> SÜMEYYE NURLU </h4>
+          
+      </div>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="images/a.jpg" class="d-block w-100" alt="Slide 1">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/b.jpg" class="d-block w-100" alt="Slide 2">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/c.jpg" class="d-block w-100" alt="Slide 3">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/d.jpg" class="d-block w-100" alt="Slide 4">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+          <p> Şehrim Mersin, Türkiye'nin Akdeniz kıyısında bulunan önemli bir liman şehridir. Tarih boyunca çeşitli medeniyetlere ev sahipliği yapmış olan Mersin, zengin kültürel mirasıyla dikkat çeker. Akdeniz ikliminin etkisi altında olan şehir, genellikle ılıman bir hava yaşar ve bu da tarıma elverişli topraklara sahip olmasını sağlar. Mersin, turistik açıdan da önemli bir destinasyondur; sahil şeridi, tarihi kalıntıları ve lezzetli Akdeniz mutfağıyla ziyaretçilerini cezbetmektedir. Ayrıca, Mersin'in ekonomisi de liman ticareti, tarım ve turizme dayanmaktadır.
+          </p>
+      </div>
   </section>
 
- <!-- ! home kısmı burada bitiyo  ---------------------------------------------->
-
-
- <footer>
-  <div class="footer-container">
-      <div class="footer-links">
-          <ul>
-              <li><a href="index.html">Anasayfa</a></li>
-              <li><a href="hakkımda.html">Hakkımda</a></li>
-              <li><a href="iletisim.html">İletişim</a></li>
-          </ul>
+  <footer>
+      <div class="footer-container">
+          <div class="footer-links">
+              <ul>
+                  <li><a href="index.html">Anasayfa</a></li>
+                  <li><a href="hakkımda.html">Hakkımda</a></li>
+                  <li><a href="iletisim.html">İletişim</a></li>
+              </ul>
+          </div>
+          <div class="contact-info">
+              <p>Telefon: 123-456-7890</p>
+              <p>Email: nurlusumeyye@gmail.com</p>
+          </div>
+          <div class="social-media">
+              <ul>
+                  <li><a href="https://www.instagram.com/sumeyye.nurlu/"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/sumeyye-/"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+          </div>
       </div>
-      <div class="contact-info">
-          <p>Telefon: 123-456-7890</p>
-          <p>Email: nurlusumeyye@gmail.com</p>
-      </div>
-      <div class="social-media">
-          
-          <ul>
-              <li><a href="https://www.instagram.com/sumeyye.nurlu/"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/sumeyye-/"><i class="fab fa-linkedin-in"></i></a></li>
-          </ul>
-      </div>
-  </div>
-  
-</footer>
-
-
+  </footer>
 </body>
 </html>
 
