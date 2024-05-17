@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Search</title>
+    <script>
+        function getbooks() {
+            document.getElementById('output').innerHTML = "";
+            const query = document.getElementById('input').value;
+            fetch("http://openlibrary.org/search.json?q=" + query)
+                .then(response => response.json())
+                .then(data => {
+                    for (let i = 0; i < 10; i++) {
+                        const book = data.docs[i];
+                        const title = book.title ? book.title : "Title not available";
+                        const author = book.author_name ? book.author_name[0] : "Author not available";
+                        const isbn = book.isbn ? book.isbn[0] : "";
+                        const imgSrc = isbn ? `http://covers.openlibrary.org/b/isbn/${isbn}-M.jpg` : "";
+                        document.getElementById('output').innerHTML += 
+                            `<h2>${title}</h2>
+                             ${author}<br>
+                             <img src="${imgSrc}" alt="Book cover"><br>`;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    document.getElementById('output').innerHTML = "An error occurred while fetching data.";
+                });
+        }
+    </script>
+</head>
+<body>
+    <input id="input">
+    <button onclick="getbooks()">Get Books</button><br>
+    <div id="output"></div>
+</body>
+</html>
