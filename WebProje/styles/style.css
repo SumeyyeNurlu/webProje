@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#cbc0c0;
+    /* bu benim ana sayfamın arkapaln rengi olacak */
+    --black-color:#05060f;
+    
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0; 
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s ease;
+    /* geçiş efekti */
+}
+
+/* html codeları */
+
+html{
+    font-size: 62.5%;
+    /* rem to px için yapılıyormuş responsive için gerekliymiş */
+    overflow-x: hidden; 
+    scroll-padding-top: 9rem; 
+    scroll-behavior:smooth ;
+
+}
+body{
+    margin: 0; 
+     padding: 0; 
+      font-family: Arial, sans-serif;
+    background-color:var(--main-color) ; 
+}
+
+section{
+    padding: 2.5rem 7%;
+    /* burası aşağıdaki 4 lü grupla aradaki boşluk için */
+
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: #110a29;
+    background-color:#955e5e7a ;
+    cursor: pointer;
+    /* a etiketi olduğu için aslında gerek yok */
+}
+
+
+
+
+
+/* !header start ***********************************************************************************************************************/
+
+
+.logo img {
+    width: 100px;
+  }
+
+.header{
+    background-color: rgba(255, 255, 255, 0.682); 
+    padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   
+    /* sayfa kaydığında header da aşağıya gelsin diye */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+
+
+.header .navbar .active,/* , ile ikisini aynı anda tanımlayabiliyoruz */
+.header .navbar a:hover{
+   /* fare üzerine geldiğinde altında çizgi oluşur */
+    border-color: var(--main-color);
+    padding-bottom: 0.1rem;
+}
+
+/* header kısmı end **************************************************************************************************************** */
+
+
+
+
+/* home kısmı  start **************************************************************************************************************** */
+.home{
+    min-height: 110vh;
+    background: url(../images/arkaplan.png)
+    no-repeat;
+    background-size: cover; 
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center; 
+}
+
+.home h4 {
+    font-size: 9rem;
+    font-weight:normal; 
+    color: #e6d290;
+}
+
+
+.home p{
+    font-size: 2rem;
+    font-weight: normal; 
+    text-align: center;
+    color: #616ba3;
+}
+
+
+.home .btn{
+    
+    text-align: center;
+    display: block; 
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+/* home end **************************************************************************************************************** */
+
+
+
+/* menu başlıyo----------------------------- */
+
+.box-head {
+    position: relative;
+} 
+
+
+.menu-category {
+    
+    position: absolute;
+    font-size: 1.4rem;
+    top: 100px; 
+    left: 20px; 
+}
+.aaaa {
+    position: absolute;
+    color: #955e5e; 
+    font-weight: bold; 
+    font-size: 1.5rem;
+    top: 8rem; 
+    left: 3rem;
+    
+}
+h3 {
+    font-size: 4rem;
+    font-weight: bold; 
+    text-align: center;
+    color: #ffffff;
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+.menu.box-container.box img{
+    width: 100%;
+
+    object-fit: cover;
+}
+
+.btns{
+    margin: 0.5rem;
+    margin-bottom: 5rem;
+    display:flex;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    
+    color: #120e2c;
+    background-color: #955e5e50;
+    cursor: pointer;
+    width: auto;
+height: auto; }
+
+  
+
+/* end menu *******************************/
+ 
+
+
+/* RESPONSİVE KISMI BAŞLIYOR */
+ @media only screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .item {
+        flex-basis: 30%; /* Örnek bir boyut, ihtiyaca göre ayarlayın */
+    }
+}
+
+/* Küçük ekranlar için stil ayarları */
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .item {
+        width: 100%; /* Örnek bir boyut, ihtiyaca göre ayarlayın */
+    } 
+
+}
+
+
+
+
+.carousel {
+    max-width: 600px; /* Slider'ın maksimum genişliği */
+    margin: 0 auto; /* Slider'ı merkezlemek için */
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+ 
+
+.home2{
+    background: #e1caca;
+    
+}
+
+.home2 h4 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight:normal; 
+    color: #932755;
+}
+
+
+.home2 p{
+    font-size: 2rem;
+    font-weight: normal; 
+    text-align: center;
+    color: #070a1a;
+}
+
+
+
+footer {
+    background-color: #957777;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-media ul li {
+    display: inline;
+  }
+  
+  .social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+
+
+
+
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #a59090;
+}
+.login-form {
+    background: rgb(213, 202, 202);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+}
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+.login-form .btn {
+    width: 100%;
+}
+
+
+
+
+
+
+.contact-form-container {
+    background-color: #d9c5e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 5001px;
+    margin: 0 auto;
+}
+
+.contact-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #8ac297;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:transparent ;
+}

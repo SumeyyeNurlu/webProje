@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- responsive olması için -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>SÜMEYYE NURLU</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+   <!-- API KISMI KİTAP SORGULAMA -->
+    <script>
+        function getbooks() {
+            document.getElementById('output').innerHTML = "";
+            const query = document.getElementById('input').value;
+            fetch("http://openlibrary.org/search.json?q=" + query)
+                .then(response => response.json())
+                .then(data => {
+                    for (let i = 0; i < 10; i++) {
+                        const book = data.docs[i];
+                        const title = book.title ? book.title : "Title not available";
+                        const author = book.author_name ? book.author_name[0] : "Author not available";
+                        const isbn = book.isbn ? book.isbn[0] : "";
+                        const imgSrc = isbn ? `http://covers.openlibrary.org/b/isbn/${isbn}-M.jpg` : "";
+                        document.getElementById('output').innerHTML += 
+                            `<h2>${title}</h2>
+                             ${author}<br>
+                             <img src="${imgSrc}" alt="Book cover"><br>`;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching data:", error);
+                    document.getElementById('output').innerHTML = "An error occurred while fetching data.";
+                });
+        }
+    </script>
+  
+  
+  </head>
+<body>
+    
+
+    <!-- ! header section start --------------------------------------------------- -->
+   
+      <header class="header">
+
+        <a href="index.html" class="logo">
+        <img src="images/sumeyye nurlu.png" alt="logo" />  
+        </a>
+       
+     <!-- div      class buttons   çalışmıyoo -->
+        
+        <nav class="navbar">
+
+            <a href="index.html" >Ana Sayfa</a>
+            <a href="hakkımda.html">Hakkımda</a>
+            <a href="ilgialanlarım.html"class="active">İlgi Alanlarım</a>         
+            <a href="mirasımız.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <!-- ! header section end  -------------------------------------------------->
+ 
+
+<!-- ------------------------------------------------------------ -->
+ <!-- ! home kısmı buradan başlıyor  ---------------------------------------------->
+ 
+<section class="home2">
+  <div class="content">
+    <h4> İLGİ ALANLARIM </h4>
+   
+    <center><img src="images/ilgialanlarım.jpg" alt="Mirasımız" width="500" height="500"></center>
+    
+    <p> Hobilerim arasında seyahat etmek, fotoğraf çekmek , film izlemek kitap okumak ve arkeoloji müzeleri gezmek gibi aktiviteler bulunuyor.
+        <br> Doğa ile iç içe olmayı seviyorum ve her fırsatta yeni keşifler yapmak için dışarıya çıkmayı tercih ediyorum. 
+        <br>Arkeoloji müzelerinde tarihle iç içe zaman geçirmek benim için büyük bir keyif. 
+        <br>Ayrıca doğa ile bağlantı kurmak, ruhumu dinlendiriyor ve her seferinde yeni bir macera sunuyor.
+        <br> Her seyahatim, benim için bir hikaye anlatma fırsatı ve yaşamın güzelliklerini keşfetme yolculuğunun bir parçası.
+        <br><br>Kitap okumaktan hoşlanırım aşağıdan yazar adı girerek kitap aratabilirsiniz.
+    </p>
+
+    <p> KİTAP LİSTESİ SORGULAMAK İSTERSENİZ (biraz uzun sürebilir lütfen bekleyin ):
+    <input id="input">
+    <button onclick="getbooks()">KİTAP SORGULA</button><br>
+    <div id="output"></div>
+    </p>
+    
+  </div>
+  </section>
+
+ <!-- footer  ---------------------------------------------->
+
+
+ <footer>
+  <div class="footer-container">
+      <div class="footer-links">
+          <ul>
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="hakkımda.html">Hakkımda</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+      </div>
+      <div class="contact-info">
+          <p>Telefon: 123-456-7890</p>
+          <p>Email: nurlusumeyye@gmail.com</p>
+      </div>
+      <div class="social-media"> 
+          <ul>
+              <li><a href="https://www.instagram.com/sumeyye.nurlu/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sumeyye-/"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  
+</footer>
+    <script src="js/script.js" type="text/javascript"></script> 
+    <script src="boostrap.js"></script>
+
+</body>
+</html>
+
+

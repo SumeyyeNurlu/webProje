@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <!-- responsive olması için -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SÜMEYYE NURLU</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+<body>
+
+
+    <!-- ! header section start --------------------------------------------------- -->
+   
+      <header class="header">
+
+        <a href="index.html" class="logo">
+        <img src="images/sumeyye nurlu.png" alt="logo" />  
+        </a>
+    
+        
+        <nav class="navbar">
+
+            <a href="index.html" >Ana Sayfa</a>
+            <a href="hakkımda.html">Hakkımda</a>
+            <a href="ilgialanlarım.html">İlgi Alanlarım</a>         
+            <a href="mirasımız.html">Mirasımız</a>
+            <a href="sehrim.html">Şehrim</a>
+            <a href="iletisim.html"class="active">İletişim</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    
+
+
+  <div class="contact-form-container">
+    <h2>Benimle İletişime Geçin</h2>
+    <form action="php/contact.php" method="post" class="contact-form">
+        <div class="form-group">
+            <label for="first-name">Ad:</label>
+            <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Soyad:</label>
+            <input type="text" id="last-name" name="last-name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Gönder</button>
+    </form>
+</div>
+
+ <footer>
+  <div class="footer-container">
+      <div class="footer-links">
+          <ul>
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="hakkımda.html">Hakkımda</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+          </ul>
+      </div>
+      <div class="contact-info">
+          <p>Telefon: 123-456-7890</p>
+          <p>Email: nurlusumeyye@gmail.com</p>
+      </div>
+      <div class="social-media">
+          
+          <ul>
+              <li><a href="https://www.instagram.com/sumeyye.nurlu/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sumeyye-/"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  
+</footer>
+
+<script src="javascript/bootstrap/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+
