@@ -17,7 +17,7 @@
                 $password = $_POST['password'];
 
                 // E-posta ve şifre doğrulaması yap
-                if ($email == 'sumeyye.nurlu@ogr.sakarya.edu.tr' && $password == '123456')
+                if ($email == 'g231210053@ogr.sakarya.edu.tr' && $password == '123456')
                 {   
                     echo "Giriş başarılı!!!!!!!!!!!!!!!!!!!!!!!!";
                 }
@@ -25,6 +25,8 @@
                 {
                     // Giriş başarısızsa hata mesajı 
                     echo "Hatalı e-posta veya şifre.!!!!!!!!!!!!!!!!!";
+                    $_SESSION['login_error'] = "Geçersiz e-posta veya şifre. Tekrar deneyin.";
+                    header("Location: ../login.html");
                 }
             }
             

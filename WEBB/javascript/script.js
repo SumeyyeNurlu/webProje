@@ -1,6 +1,5 @@
 
 
-
 // javascript/validation.js
 
 function validateForm() {
@@ -11,7 +10,7 @@ function validateForm() {
     // E-posta doğrulama (örnek olarak basit bir regex kullanılıyor)
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-        alert('Lütfen geçerli bir e-posta adresi girin.');
+        alert('Lütfen bu alanı doldurun.');
         return false;
     }
 
