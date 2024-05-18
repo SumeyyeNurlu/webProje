@@ -232,7 +232,7 @@ height: auto; }
     height: auto;
   }
   
-
+ 
 
 .home2{
     background: #e1caca;
@@ -304,10 +304,10 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f8f9fa;
+    background-color: #a59090;
 }
 .login-form {
-    background: white;
+    background: rgb(213, 202, 202);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
